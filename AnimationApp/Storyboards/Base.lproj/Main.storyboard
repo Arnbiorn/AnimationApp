@@ -56,6 +56,66 @@
                                     <action selector="coreAnimationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jer-th-yyn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oa2-NN-GXZ" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="246" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-sP-RHU">
+                                        <rect key="frame" x="42" y="51" width="156.5" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="1" green="0.066149234409999993" blue="0.0072309099840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="H8c-sP-RHU" firstAttribute="centerX" secondItem="Oa2-NN-GXZ" secondAttribute="centerX" id="3Ub-15-7P5"/>
+                                    <constraint firstAttribute="width" constant="240" id="9DC-H8-GbR"/>
+                                    <constraint firstAttribute="height" constant="128" id="aKl-GA-J6r"/>
+                                    <constraint firstItem="H8c-sP-RHU" firstAttribute="centerY" secondItem="Oa2-NN-GXZ" secondAttribute="centerY" id="hEp-6Y-BYk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="morph"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQY-74-lQT" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="87" y="703" width="240" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Run Spring Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="springAnimationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYn-fZ-zCs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,12 +123,18 @@
                             <constraint firstItem="8Ho-Fb-DBP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="24S-aV-6gE"/>
                             <constraint firstItem="1qM-BR-NA0" firstAttribute="width" secondItem="8Ho-Fb-DBP" secondAttribute="width" id="3pW-6w-pHZ"/>
                             <constraint firstItem="8Ho-Fb-DBP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4L2-oj-BjX"/>
+                            <constraint firstItem="sQY-74-lQT" firstAttribute="width" secondItem="Oa2-NN-GXZ" secondAttribute="width" id="7GS-Z9-sac"/>
+                            <constraint firstItem="Oa2-NN-GXZ" firstAttribute="top" secondItem="8Ho-Fb-DBP" secondAttribute="bottom" constant="40" id="Mcf-EV-Xka"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1qM-BR-NA0" secondAttribute="bottom" multiplier="1.3" id="QO1-WH-0bx"/>
+                            <constraint firstItem="sQY-74-lQT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U38-cs-MNS"/>
                             <constraint firstItem="1qM-BR-NA0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIo-tJ-eXZ"/>
+                            <constraint firstItem="Oa2-NN-GXZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nB6-AJ-QpG"/>
+                            <constraint firstItem="sQY-74-lQT" firstAttribute="top" secondItem="1qM-BR-NA0" secondAttribute="bottom" constant="40" id="tf3-x1-MCq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coreAnimationView" destination="8Ho-Fb-DBP" id="PGT-WF-EV4"/>
+                        <outlet property="springAnimationView" destination="Oa2-NN-GXZ" id="R20-Do-fGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,6 +143,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
